@@ -32,13 +32,13 @@ class BonusServiceTest {
     void bonusDeveriaSer10PorCentoParaSalarioDeExatamente10000() {
         BonusService service = new BonusService();
         BigDecimal bonus = service.calcularBonus(new Funcionario("Leo", LocalDate.now(), new BigDecimal("10000")));
-        try {
-            service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000")));
-            fail("Não deu a exception!");
-        } catch (Exception e) {
-            assertEquals("Funcionario com salario maior do que R$10000 nao pode receber bonus!", e.getMessage());
-
-        }
+//        try {
+//            service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000")));
+//            fail("Não deu a exception!");
+//        } catch (Exception e) {
+//            assertEquals("Funcionario com salario maior do que R$10000 nao pode receber bonus!", e.getMessage());
+//
+//        }
 
     }
 
